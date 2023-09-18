@@ -64,7 +64,7 @@ const Login = () => {
       <div className="xl:h-screen 2xl:h-screen lg:h-screen md:h-screen sm:h-screen xs:h-screen xxs:h-screen md:pt-12 sm:pt-12 xs:pt-12 xxs:pt-12">
         <div className="xl:bg-slate-900 2xl:bg-slate-900 lg:bg-slate-900 relative">
           <img
-            src=""
+            src="../../public/Images/saathlogo.jpeg"
             alt=""
             className="xl:h-screen 2xl:h-screen lg:h-screen w-1/2 md:m-auto sm:m-auto xs:m-auto xxs:m-auto md:rounded-full sm:rounded-full xs:rounded-full xxs:rounded-full"
           />
