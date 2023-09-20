@@ -20,6 +20,7 @@ const Updateclientform = () => {
   const [gender, setGender ] = useState(popupdata.gender);
   const [city, setCity] = useState(popupdata.city);
   const [aadhar, setAadhar] = useState(popupdata.aadhar);
+  const [remark, setRemark] = useState(popupdata.remark);
 
   let tokenData = localStorage.getItem("token");
   let tokenExpiry;
@@ -75,7 +76,8 @@ const Updateclientform = () => {
           state:state,
           zip:zip,
           city:city,
-          aadhar:aadhar
+          aadhar:aadhar,
+          remark:remark
         },
         headers: {
           Authorization: `Bearer ${token}`,
@@ -297,6 +299,22 @@ const Updateclientform = () => {
               placeholder=""
               defaultValue={popupdata.state}
               onChange={(e)=>setState(e.target.value)}
+            />
+          </div>
+          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-state"
+            >
+              Remark
+            </label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-city"
+              type="text"
+              placeholder=""
+              defaultValue={popupdata.remark}
+              onChange={(e)=>setRemark(e.target.value)}
             />
           </div>
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
