@@ -16,7 +16,7 @@ const schema = yup
     city: yup.string().required(),
     email: yup.string().email().required(),
     phone: yup.number().min(10).required(),
-    aadhar: yup.number().min(0).max(999).nullable(true).transform((_, val) => val === Number(val) ? val : null),
+    aadhar: yup.number().optional(),
     pan: yup.string().optional(),
     gst: yup.string().optional(),
     zip: yup.number().min(6).required(),
